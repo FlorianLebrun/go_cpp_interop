@@ -1,0 +1,4 @@
+LIBRARY mygolib
+EXPORTS
+Add
+RetPtr

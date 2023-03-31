@@ -1,0 +1,12 @@
+set(target App)
+
+set(files main.cpp)
+
+source_group("" FILES ${files})
+add_executable(${target} WIN32 ${files})
+
+target_include_directories(${target} PRIVATE ${CMAKE_SOURCE_DIR}/dist)
+
+target_link_libraries(${target} PUBLIC ${CMAKE_SOURCE_DIR}/dist/mylib.lib)
+
+target_link_options(${target} PRIVATE /SUBSYSTEM:CONSOLE)
